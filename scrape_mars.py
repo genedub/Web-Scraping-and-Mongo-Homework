@@ -36,7 +36,7 @@ def scrape():
     
     data.set_index("Mars-Earth Comparison",inplace=True)
 
-    mongo_data = data.to_html()
+    mongo_data = data
 
     url3 = 'https://marshemispheres.com/'
 
@@ -53,7 +53,7 @@ def scrape():
     scrape_results = {"images": url_images,
                       "title": news_title,
                       "news": news_p,
-                      "data": data
+                      "data": data,
                       "mongo_data": mongo_data
                         }
 
